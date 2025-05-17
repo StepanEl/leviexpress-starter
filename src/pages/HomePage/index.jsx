@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { JourneyPicker } from '../../components/JourneyPicker';
+import { JourneyDetail } from '../../components/JourneyDetail/JourneyDetail';
 
 export const HomePage = () => {
-  const[yourney, setYourney] = useState(null)
-  const handleJourneyChange = (yourneyData) => {
-    setYourney(yourneyData)
+  const[journey, setJourney] = useState(null)
+  const handleJourneyChange = (journeyData) => {
+    setJourney(journeyData)
   }
   return (
     <main>
       <JourneyPicker onJourneyChange={handleJourneyChange} />
-      {yourney && `Nalezeno spojení s id ${yourney.journeyId}`}
+      {journey && <JourneyDetail journey={journey}/>}
     </main>
 
   );
