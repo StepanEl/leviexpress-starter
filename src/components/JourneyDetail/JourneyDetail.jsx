@@ -2,7 +2,6 @@ import { BusStops } from '../BusStops/BusStops'
 import './JourneyDetail.css'
 
 export const JourneyDetail = ({ journey }) => {
-    console.log(journey)
     return (
         <div className="journey-detail container">
             <h2>Podrobnosti cesty</h2>
