@@ -1,14 +1,14 @@
 import { SeatRow } from '../SeatRow/SeatRow'
 import './SeatPicker.css'
 
-export const SeatPicker = ({seats}) => {
+export const SeatPicker = ({seats, selectedSeat}) => {
 
     return (
         <div className="seat-picker container">
             <h2>Vyberte sedadlo</h2>
             <div className="seats">
                 {seats.map((row, i) => 
-                 <SeatRow key={i} row={row} />
+                 <SeatRow key={i} row={row} rowSelectedSeat={selectedSeat} />
                 )}
             </div>
         </div>
